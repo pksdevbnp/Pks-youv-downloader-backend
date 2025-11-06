@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PKS YOU V DOWNLOADER</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <img src="/assets/logo.svg" alt="logo"/>
+      <div>PKS <span class="badge">YOU V</span> DOWNLOADER</div>
+    </div>
+    <div>Fast • Secure • No API</div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="row">
+        <input id="u" type="url" placeholder="Paste YouTube link..." />
+        <button id="go">Fetch</button>
+        <button id="clear" class="secondary">Clear</button>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <label>MP4 height:
+          <select id="q">
+            <option value="2160">2160p</option>
+            <option value="1440">1440p</option>
+            <option value="1080" selected>1080p</option>
+            <option value="720">720p</option>
+            <option value="480">480p</option>
+          </select>
+        </label>
+        <button id="mp4" class="secondary">Get MP4 (Server)</button>
+        <button id="mp3" class="secondary">Get MP3 (Server)</button>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="video">Video/Audio</div>
+        <div class="tab" data-tab="subs">Subtitles</div>
+      </div>
+
+      <img id="thumb" class="thumb" style="display:none"/>
+      <h3 id="title"></h3>
+      <div id="meta"></div>
+      <div class="status" id="status"></div>
+
+      <div class="section active" id="sec-video">
+        <div class="grid" id="list"></div>
+      </div>
+      <div class="section" id="sec-subs">
+        <div class="grid" id="subs"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Use only with content you own or have permission for. Respect YouTube ToS.</div>
+
+  <script>
+    // Replace with your Railway URL
+    window.BACKEND_BASE = "https://YOUR-RAILWAY-URL.up.railway.app";
+    if('serviceWorker' in navigator){ navigator.serviceWorker.register('/sw.js'); }
+  </script>
+  <script src="/app.js"></script>
+</body>
+</html>

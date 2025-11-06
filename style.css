@@ -1,0 +1,33 @@
+
+:root{
+  --red:#ff2a2a; --blue:#0f2b6b; --black:#0b0d12;
+  --card:#121624; --text:#e8eefc; --muted:#90a0d0;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,Arial;background:radial-gradient(900px 600px at 10% 10%,#0f2b6b 0%,#0b0d12 60%);color:var(--text)}
+.header{padding:14px 16px;border-bottom:1px solid #161a2c;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
+.brand img{height:40px}
+.badge{background:var(--red);padding:4px 8px;border-radius:8px}
+.container{max-width:980px;margin:20px auto;padding:16px}
+.card{background:linear-gradient(180deg,#121a2f,#0e1527);border:1px solid #18224a;border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+input[type=url]{flex:1;min-width:240px;padding:14px;border-radius:12px;border:1px solid #243264;background:#0c1120;color:#eaf0ff}
+button{border:0;border-radius:12px;padding:12px 16px;font-weight:700;color:white;background:linear-gradient(180deg,#ff3a3a,#b81212);cursor:pointer}
+button.secondary{background:linear-gradient(180deg,#1f3b9e,#0d2a7a)}
+select{padding:10px;border-radius:10px;background:#0c1120;color:#eaf0ff;border:1px solid #243264}
+.tabs{display:flex;gap:6px;margin-top:10px}
+.tab{padding:8px 12px;border-radius:10px;background:#0f2b6b;cursor:pointer}
+.tab.active{background:#ff2a2a}
+.section{display:none;margin-top:10px}
+.section.active{display:block}
+.thumb{width:100%;max-height:320px;object-fit:cover;border-radius:12px;border:1px solid #23305f;margin-top:12px}
+.grid{display:grid;gap:10px;margin-top:12px}
+.item{display:flex;justify-content:space-between;align-items:center;background:#121624;padding:10px;border:1px solid #243264;border-radius:10px}
+small{color:var(--muted)}
+a.btn{padding:8px 10px;border-radius:8px;text-decoration:none;background:#0f2b6b;color:#fff}
+a.btn:hover{filter:brightness(1.1)}
+.footer{opacity:.7;text-align:center;padding:20px}
+.status{margin-top:10px;font-size:12px;color:var(--muted)}
+.copy{margin-left:6px}
